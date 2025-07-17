@@ -17,19 +17,8 @@ Preprocessed multimodal prognosis data: TCGA [[Baidu Disk](https://pan.baidu.com
 
 ## Easy to Use!
 
-* train
-
-```
-bash ./smalltrain.sh
-```
-
-* test
-
-```
-bash ./test_specific.sh
-```
-
 * For implementation, the difference between achieving generalization with MixStyle and conducting multi-modal learning of pathological image features and genetic features is very small. In addition to mapping the two modalities into the same dimension through a neural network, MCCSDG simply adds a modality mask and adjusts the mixing strategy to the existing method. This is all we need to convert a unimodal robust feature learning method (e.g., MixStyle) into a multimodal robust feature learning method, and deliver all the magic. The **core code** is shown as follows.
+
 * [**Plug-and-play**] [Input: f1, f2] [Output: f1, f2] 
 
 ```
@@ -169,6 +158,18 @@ class MCCSDG(nn.Module):
 ```
 
 ![KM.](figures/MMSDG-KM.png)
+
+* train
+
+```
+bash ./smalltrain.sh
+```
+
+* test
+
+```
+bash ./test_specific.sh
+```
 
 ## Citation :heart_eyes: :fire:
 
